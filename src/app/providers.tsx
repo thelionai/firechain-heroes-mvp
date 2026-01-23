@@ -8,7 +8,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const config = getDefaultConfig({
   appName: "FireChain Heroes",
-  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID!, // WalletConnect Cloud
+  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "demo-project-id", // Fallback para build
   chains: [polygon, base],
   // Opcional: si quieres forzar RPCs:
   // transports: {
